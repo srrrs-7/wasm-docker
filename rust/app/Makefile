@@ -1,4 +1,4 @@
-.PHONY: run build test check fmt clippy benchmark
+.PHONY: run build test check fmt clippy benchmark docker-build
 run:
 	wasmtime ./target/wasm32-wasi/debug/app.wasm
 build:
@@ -15,3 +15,6 @@ benchmark:
 	cargo bench
 tree:
 	cargo tree
+
+docker-build:
+	docker buildx build --platform wasi/wasm32 -t app.wasm ../.

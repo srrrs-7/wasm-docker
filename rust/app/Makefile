@@ -2,7 +2,7 @@
 run:
 	wasmtime ./target/wasm32-wasi/debug/app.wasm
 build:
-	cargo build --target wasm32-wasi
+	cargo build --target wasm32-wasi --release
 test:
 	cargo test
 check:

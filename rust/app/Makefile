@@ -1,0 +1,17 @@
+.PHONY: run build test check fmt clippy benchmark
+run:
+	wasmtime ./target/wasm32-wasi/debug/app.wasm
+build:
+	cargo build --target wasm32-wasi
+test:
+	cargo test
+check:
+	cargo check
+fmt:
+	cargo fmt
+clippy:
+	cargo clippy
+benchmark:
+	cargo bench
+tree:
+	cargo tree

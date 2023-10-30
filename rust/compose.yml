@@ -5,4 +5,6 @@ services:
       context: .
       dockerfile: Dockerfile
     platform: wasi/wasm
-    runtime: io.containerd.wasmtime.v1
+    runtime: io.containerd.wasmedge.v1
+    ports:
+      - 8080:8080

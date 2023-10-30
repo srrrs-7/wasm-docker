@@ -18,3 +18,5 @@ name = "benchmark"
 harness = false
 
 [dependencies]
+hyper_wasi = { version = "0.15", features = ["full"]}
+tokio_wasi = { version = "1.21", features = ["rt", "macros", "net", "time", "io-util"]}

@@ -5,6 +5,8 @@ use hyper::service::service_fn;
 use hyper::{Body, Method, Request, Response};
 use tokio::net::TcpListener;
 
+use lib::echo;
+
 async fn echo(req: Request<Body>) -> Result<Response<Body>, hyper::Error> {
   match (req.method(), req.uri().path()) {
 

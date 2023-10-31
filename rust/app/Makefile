@@ -15,6 +15,12 @@ benchmark:
 	cargo bench
 tree:
 	cargo tree
+lib:
+	cargo new --lib ${arg}
+bin:
+	cargo new --bin ${arg}
+pkg:
+	cargo new ${arg}
 
 docker-build:
 	docker buildx build --platform wasi/wasm32 -t app.wasm ../.

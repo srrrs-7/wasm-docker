@@ -1,6 +1,6 @@
 .PHONY: run build test check fmt clippy benchmark docker-build
 run:
-	wasmedge ./target/wasm32-wasi/release/app.wasm
+	wasmedge ./target/wasm32-wasi/release/wasm.wasm
 build:
 	cargo build --target wasm32-wasi --release
 test:

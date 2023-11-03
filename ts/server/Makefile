@@ -1,4 +1,4 @@
-.PHONY: run dev wasmbuild test fmt
+.PHONY: run serve dev pjt build test fmt
 
 run:
 	deno run --allow-read ./src/main.ts
